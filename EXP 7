@@ -1,0 +1,12 @@
+from urllib.parse import urlparse
+import re
+
+url = input("Enter URL: ").lower()
+host = urlparse(url).hostname or ""
+
+if (any(x in url for x in ["login", "verify", "free", "update"]) 
+    or re.fullmatch(r"\d{1,3}(\.\d{1,3}){3}", host)
+    or len(host.split(".")) > 4):
+    print("Suspicious URL")
+else:
+    print("No common phishing indicators found")
