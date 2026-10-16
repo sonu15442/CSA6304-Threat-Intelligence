@@ -1,0 +1,9 @@
+logs = ["INFO Login", "ERROR Failed", "INFO Logout"]
+index = []
+
+for log in logs:
+    parts = log.split(" ", 1)
+    index.append({"level": parts[0], "message": parts[1]})
+
+print("Indexed logs:", index)
+print("Error count:", sum(x["level"] == "ERROR" for x in index))
