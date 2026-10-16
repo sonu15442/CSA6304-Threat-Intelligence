@@ -1,0 +1,8 @@
+s = input("Enter report description: ").lower()
+
+if any(x in s for x in ["executive", "business risk", "long-term"]):
+    print("Strategic")
+elif any(x in s for x in ["attacker tactics", "techniques", "ioc"]):
+    print("Tactical")
+else:
+    print("Operational")
