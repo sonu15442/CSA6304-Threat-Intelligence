@@ -1,0 +1,12 @@
+connections = set()
+
+action = input("Enter outbound or inbound: ").lower()
+connection = input("Enter connection ID: ")
+
+if action == "outbound":
+    connections.add(connection)
+    print("Outbound Allowed")
+elif connection in connections:
+    print("Return Traffic Allowed")
+else:
+    print("Inbound Blocked")
