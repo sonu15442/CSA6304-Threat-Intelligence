@@ -1,0 +1,17 @@
+s = input("Describe team activity: ").lower()
+
+stages = {
+    "direction": ["requirement", "planning"],
+    "collection": ["gather", "collect"],
+    "processing": ["clean", "format"],
+    "analysis": ["analyze", "investigate"],
+    "dissemination": ["share", "report"],
+    "feedback": ["feedback", "improve"]
+}
+
+for stage, words in stages.items():
+    if any(word in s for word in words):
+        print("Stage:", stage.title())
+        break
+else:
+    print("Stage not identified")
