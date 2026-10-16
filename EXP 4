@@ -1,0 +1,8 @@
+data = "Secret Message"
+key = 7
+
+encrypted = "".join(chr(ord(c) ^ key) for c in data)
+print("Encrypted:", encrypted)
+
+decrypted = "".join(chr(ord(c) ^ key) for c in encrypted)
+print("Decrypted:", decrypted)
