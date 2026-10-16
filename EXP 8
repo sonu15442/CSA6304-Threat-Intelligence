@@ -1,0 +1,13 @@
+rules = {
+    "LowTrust": ["Internet"],
+    "Admin": ["Internet", "Sensitive"],
+    "Sensitive": []
+}
+
+source = input("Enter source segment: ")
+destination = input("Enter destination: ")
+
+if destination in rules.get(source, []):
+    print("Access Allowed")
+else:
+    print("Access Blocked")
