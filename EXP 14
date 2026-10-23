@@ -1,0 +1,20 @@
+from collections import Counter
+
+events = [
+    ("192.168.1.10", "failed_login"),
+    ("192.168.1.10", "failed_login"),
+    ("192.168.1.10", "failed_login"),
+    ("192.168.1.20", "login_success")
+]
+
+print("Collected and normalized events:", len(events))
+
+failures = Counter(
+    ip for ip, event in events if event == "failed_login"
+)
+
+for ip, count in failures.items():
+    if count >= 3:
+        print("ALERT: Multiple failed logins from", ip)
+
+print("SIEM processing completed")
