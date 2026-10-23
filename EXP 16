@@ -1,0 +1,10 @@
+attack = input("Enter attack type: ").lower()
+
+if attack == "malware":
+    print("Firewall: BLOCKED")
+    print("Final Result: Attack stopped")
+else:
+    print("Firewall: PASSED")
+    print("Antivirus: PASSED")
+    print("Access Control: BLOCKED")
+    print("Final Result: Attack stopped")
