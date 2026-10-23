@@ -1,0 +1,8 @@
+context = input("Enter threat context: ")
+confidence = input("Enter confidence: ").lower()
+action = input("Enter recommended action: ")
+
+if context.strip() and confidence in ["high", "medium", "low"] and action.strip():
+    print("Actionable Threat Intelligence")
+else:
+    print("Raw or Incomplete Data")
