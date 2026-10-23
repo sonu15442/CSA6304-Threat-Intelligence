@@ -1,0 +1,14 @@
+case = input("Enter incident description: ").lower()
+
+if "phishing" in case or "fake email" in case:
+    print("Root Cause: Phishing")
+elif "unpatched" in case or "missing patch" in case:
+    print("Root Cause: Unpatched Vulnerability")
+elif "misconfiguration" in case or "wrong permissions" in case:
+    print("Root Cause: Misconfiguration")
+elif "insider" in case or "employee stole" in case:
+    print("Root Cause: Insider Threat")
+elif "third-party vendor" in case or "malicious dependency" in case:
+    print("Root Cause: Supply-Chain Compromise")
+else:
+    print("Root Cause: Unknown")
