@@ -1,0 +1,17 @@
+import hashlib
+
+file = input("Enter file name: ")
+
+with open(file, "rb") as f:
+    data = f.read()
+
+hash_value = hashlib.sha256(data).hexdigest()
+
+print("SHA-256 Hash:", hash_value)
+
+known_hash = input("Enter known malware hash: ")
+
+if hash_value == known_hash:
+    print("Malware Detected!")
+else:
+    print("No Known Malware Match")
