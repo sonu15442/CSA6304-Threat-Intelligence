@@ -1,0 +1,21 @@
+logs = [
+    "sonu failed",
+    "sonu failed",
+    "sonu failed",
+    "sonu success"
+]
+
+count = {}
+
+for log in logs:
+    user, status = log.split()
+
+    if status == "failed":
+        count[user] = count.get(user, 0) + 1
+
+    elif status == "success":
+        if count.get(user, 0) >= 3:
+            print(user, "- Possible Brute Force Attack")
+        count[user] = 0
+
+print("Log Analysis Completed")
