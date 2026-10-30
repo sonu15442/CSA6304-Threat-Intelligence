@@ -1,0 +1,18 @@
+logs = [
+    "INFO: System started",
+    "ERROR: Login failed",
+    "WARNING: High CPU usage",
+    "ERROR: File not found",
+    "INFO: User logged in"
+]
+
+count = 0
+
+print("Error Logs:")
+
+for log in logs:
+    if "ERROR" in log:
+        print(log)
+        count += 1
+
+print("Total Errors:", count)
