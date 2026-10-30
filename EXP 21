@@ -1,0 +1,13 @@
+incident = input("Enter incident details: ").lower()
+
+if "patch" in incident:
+    print("Improvement: Update Security Patches")
+
+if "training" in incident:
+    print("Improvement: Employee Security Training")
+
+if "monitoring" in incident:
+    print("Improvement: Improve System Monitoring")
+
+if not any(word in incident for word in ["patch", "training", "monitoring"]):
+    print("No Improvement Tag Found")
