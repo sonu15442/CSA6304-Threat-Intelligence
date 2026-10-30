@@ -1,0 +1,10 @@
+text = input("Enter security control description: ").lower()
+
+if "training" in text or "awareness" in text:
+    print("Domain: People")
+elif "office" in text or "door" in text or "physical" in text:
+    print("Domain: Physical")
+elif "software" in text or "network" in text or "system" in text:
+    print("Domain: Technological")
+else:
+    print("Domain: Organizational")
