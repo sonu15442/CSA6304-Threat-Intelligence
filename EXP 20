@@ -1,0 +1,10 @@
+data = input("Enter network activity: ").lower()
+
+if "flood" in data or "multiple requests" in data:
+    print("Threat: DoS/DDoS Attack")
+elif "unauthorized" in data or "suspicious login" in data:
+    print("Threat: Unauthorized Access")
+elif "malicious" in data:
+    print("Threat: Malware Activity")
+else:
+    print("Threat: No Known Threat")
