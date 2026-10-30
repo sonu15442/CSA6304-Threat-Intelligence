@@ -1,0 +1,14 @@
+controls = {
+    "Antivirus": "Disabled",
+    "Backups": "Disabled",
+    "Firewall": "Enabled",
+    "Updates": "Enabled"
+}
+
+for control, status in controls.items():
+    print(control, ":", status)
+
+    if status == "Disabled":
+        print("Status: Non-Compliant")
+    else:
+        print("Status: Compliant")
